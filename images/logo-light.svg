@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2ea6ff"/>
+      <stop offset="100%" stop-color="#7cc7ff"/>
+    </linearGradient>
+  </defs>
+  <rect rx="8" ry="8" x="0" y="0" width="48" height="48" fill="url(#g)"/>
+  <path d="M12 30 l6-18 h4 l6 18 h-4 l-1.2-4 h-6.4 l-1.2 4 z m6.2-7.5 h4.6 l-2.3-7.2z" fill="#ffffff"/>
+  <text x="60" y="32" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Al-Waad</text>
+  <text x="60" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#e9eef6">International Company</text>
+</svg>

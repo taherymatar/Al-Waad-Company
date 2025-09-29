@@ -1,0 +1,168 @@
+/* Theme */
+:root {
+  --primary: #0d6efd;
+  --dark: #1f2937;
+  --light: #f8f9fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+  padding-top: 108px; /* offset for fixed topbar (36px) + fixed navbar (72px) */
+}
+
+/* Navbar */
+.navbar-brand img { filter: drop-shadow(0 1px 1px rgba(0,0,0,.25)); }
+.nav-link { font-weight: 500; }
+.nav-link.active { color: var(--primary) !important; }
+.navbar.fixed-top { top: 36px; }
+
+/* Top Info Bar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: #0b203a;
+  z-index: 1040; /* above navbar */
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.topbar .container { height: 100%; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+              url('../images/1 (3).jpg') center/cover no-repeat;
+}
+.hero .container { z-index: 2; }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.4), rgba(0,0,0,0));
+}
+.hero h1 { text-shadow: 0 2px 10px rgba(0,0,0,.45); }
+.hero p { text-shadow: 0 1px 6px rgba(0,0,0,.35); }
+
+/* Hero brand badge */
+.hero-brand-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+.hero-brand-badge img { height: 28px; }
+.hero-brand-badge .title { font-weight: 700; letter-spacing: .3px; }
+
+/* Section titles */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: var(--primary);
+  margin-top: 8px;
+}
+
+/* Icon cards */
+.icon-box { height: 64px; display: grid; place-items: center; }
+.card h4 { margin-top: .25rem; }
+
+/* Contact */
+.contact-info a { text-decoration: none; }
+.contact-info a:hover { text-decoration: underline; }
+
+/* Footer */
+footer { border-top: 1px solid #e9ecef; }
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(13, 110, 253, .35);
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all .25s ease;
+  z-index: 1030;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 80px;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, .4);
+  text-decoration: none;
+  font-size: 26px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  z-index: 1030;
+}
+.whatsapp-float:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(37, 211, 102, .5); }
+
+/* Carousel */
+.carousel-item img { object-fit: cover; height: 420px; }
+
+/* Utilities */
+.shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,.05); }
+.rounded-4 { border-radius: 1rem; }
+
+/* Certificate */
+.certificate-frame {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: .75rem;
+  overflow: hidden;
+}
+.certificate-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 80vh;
+  background: #f8f9fa;
+}
